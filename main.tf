@@ -5,7 +5,7 @@ resource "google_storage_bucket" "tf_demo" {
   }
 
   resource "google_compute_instance" "terafom_demo" {
-    name = "tf_gcp_demo_202322"
+    name = "tf-gcp-demo-202322"
     machine_type = "e2-standard-2"
     zone = "europe-west2-b"
     tags = ["dev"]
