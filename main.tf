@@ -3,3 +3,21 @@ resource "google_storage_bucket" "tf_demo" {
     location = "europe-west2"
     storage_class = "nearline"
   }
+
+  resource "google_compute_instance" "terafom_demo" {
+    name = "tf_gcp_demo_202322"
+    machine_type = "e2-standard-2"
+    zone = "europe-west2"
+    tags = ["dev"]
+    boot_disk {
+      initialize_params {
+        image = "debian-cloud/debian-11"
+      }
+    }
+    network_interface {
+      network = "default"
+      access_config {
+        
+      }
+    }
+  }
