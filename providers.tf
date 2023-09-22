@@ -5,7 +5,7 @@ terraform {
       version = "4.83.0"
     }
   }
-  backend "gcp_fga" {
+  backend "gcs" {
     bucket ="tf_gcp_demo_222023"
     prefix ="terrafom/state"
   }
